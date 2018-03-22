@@ -1,0 +1,23 @@
+{
+    "name": "ruchee/phone_attribution",
+    "description": "Attribution of Chinese mobile phone number",
+    "keywords": ["phone", "attribution", "chinese"],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/ruchee/phone_attribution",
+    "authors": [
+        {
+            "name": "Ruchee",
+            "email": "my@ruchee.com",
+            "homepage": "http://www.ruchee.com"
+        }
+    ],
+    "require": {
+        "php": "~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ruchee\\PhoneAttribution\\": "src/"
+        }
+    }
+}

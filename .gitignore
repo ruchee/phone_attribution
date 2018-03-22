@@ -1,0 +1,17 @@
+/vendor
+
+.DS_Store
+Thumbs.db
+
+.vagrant
+.idea
+.vscode
+.svn
+
+*.swp
+*.cache
+*.log
+*.bak
+
+/make_tags
+/tags
