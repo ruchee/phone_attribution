@@ -1,8 +1,8 @@
 ## 手机号码归属地
 [![Latest Stable Version](https://img.shields.io/packagist/v/ruchee/phone_attribution.svg)](https://packagist.org/packages/ruchee/phone_attribution)
 
-数据文件来源：[https://github.com/xluohome/phonedata/blob/master/phone.dat]
-解析算法参考：[https://github.com/shitoudev/phone-location/blob/master/src/PhoneLocation.php]
+* 数据文件来源：[https://github.com/xluohome/phonedata/blob/master/phone.dat]
+* 解析算法参考：[https://github.com/shitoudev/phone-location/blob/master/src/PhoneLocation.php]
 
 ### 安装
 ```
