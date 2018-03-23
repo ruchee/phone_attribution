@@ -68,6 +68,11 @@ class Parse
 
         $this->return_data['data'] = $this->parse(trim($phone));
 
+        if (empty($this->return_data['data'])) {
+            $this->return_data['status'] = 0;
+            $this->return_data['info']   = '解析失败';
+        }
+
         return $this->return_data;
     }
 
@@ -85,9 +90,24 @@ class Parse
             return $this->return_data;
         }
 
+        $failed                    = true;
         $this->return_data['data'] = [];
         foreach ($phone_list as $phone) {
-            $this->return_data['data'][trim($phone)] = $this->parse(trim($phone));
+            $phone = trim($phone);
+            $ret   = $this->parse($phone);
+
+            $this->return_data['data'][$phone] = $ret;
+
+            // 只要有一个号码解析成功，就不算失败
+            if (! empty($ret)) {
+                $failed = false;
+            }
+        }
+
+        if ($failed) {
+            $this->return_data['status'] = 0;
+            $this->return_data['info']   = '解析失败';
+            $this->return_data['data']   = [];
         }
 
         return $this->return_data;
